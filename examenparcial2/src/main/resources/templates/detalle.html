@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"></meta>
+	<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>TeCaSa - Workshop details</title>
+</head>
+<body>
+<h3>Details:</h3>
+	Name:<span th:text="${workshopData.name}">Name</span><br/>
+	Author:<span th:text="${workshopData.author}">Author</span><br/>
+	Objective <span th:text="${workshopData.objective}">Objective</span></li>
+<br/>
+    Activities:
+    <div th:each="entry : ${workshopData.activities}">
+    	<ul>
+    		<li>Name: <span th:text="${entry.name}">Name</span><br>
+    			Description: <span th:text="${entry.description}">Description</span><br>
+    				Text to display: <span th:text="${entry.text}">Text</span></li>
+    	</ul>
+    </div>
+    <a th:href="@{/agregarActividad/{id}(id=${workshopData.id})}">Add activity</a><br>
+    <a href="/">Return to home</a>
+</body>
+</html>
+

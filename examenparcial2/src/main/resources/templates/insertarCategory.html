@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <title>TeCaSa - Insert</title>
+</head>
+<body>
+<h3>Insert:</h3>
+<form action="#" th:action="@{/insertarCategory}" th:object="${category}" method="post">
+    <label for="name">Nombre</label>
+    <input type="text" th:field="*{name}" id="name">
+    <input type="submit" value="Add category">
+</form>
+
+</body>
+</html>

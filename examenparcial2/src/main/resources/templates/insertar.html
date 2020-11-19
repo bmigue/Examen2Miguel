@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>TeCaSa - Insert</title>
+</head>
+<body>
+<h3>Insert:</h3>
+<form action="#" th:action="@{/insertar}" th:object="${workshop}" method="post">
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name">
+    <br/>
+    <label for="name">Objective</label>
+    <input type="text" th:field="*{objective}" id="objective">
+    <br/>
+    <label for="author">Author</label>
+    <select type="text" th:field="*{author}" id="author">
+    <option value="Miguel Gutierrez">Miguel Gutierrez</option>
+    <option value="Mario Aguero">Mario Aguero</option>
+    <option value="Tracy Mora">Tracy Mora</option>
+    <option value="Marlon Aguero">Marlon Aguero</option>
+    </select>
+    <br/>
+     <br/>
+    <label for="keywords">Keywords</label>
+    <input type="text" th:field="*{keywords}" id="keywords">
+    <br/>
+        <label for="category">Category</label>
+        <select name="category" id="category" th:field="*{category}" >
+            <option th:each="entry : ${category}" th:value="${entry.name}" th:text="${entry.name}"></option>
+        </select>
+    <br/>
+     <input type="submit" value="Add Workshop">
+</form>
+
+
+
+</body>
+</html>
