@@ -19,6 +19,11 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
+    public void delete(Category category) {
+        repo.delete(category);
+    }
+
+    @Override
     public Optional<Category> get(Long id) {
         return repo.findById(id);
     }

@@ -1,0 +1,15 @@
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <title>TeCaSa - Borrar categoria</title>
+</head>
+<body>
+<h3>Delete category:</h3><br/>
+<form th:action="@{/deleteCat/{id}(id=${category.id})}" th:object="${category}" method="post">
+    Desea eliminar la categoria?<span th:text="${category.name}">Name</span><br/>
+
+    <input type="submit" value="Delete">
+    <a href="/">Volver al index</a>
+</form>
+</html>

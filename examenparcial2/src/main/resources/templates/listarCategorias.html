@@ -15,6 +15,7 @@
 
                 <span><bold>Name: </bold></span><span th:text="${entry.name}">Nombre</span><br/>
                 <a th:href="@{/editCat/{id}(id=${entry.id})}">Editar</a><br/>
+                <a th:href="@{/deleteCat/{id}(id=${entry.id})}">Borrar</a><br/>
 
             </li>
         </div>

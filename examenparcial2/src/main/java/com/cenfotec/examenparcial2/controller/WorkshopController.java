@@ -247,4 +247,20 @@ public class WorkshopController {
             return "notfound";
         }
     }
+
+    @RequestMapping(value = "/deleteCat/{id}", method = RequestMethod.POST)
+    public String deleteEdition(Category cat, Model model, @PathVariable long id) {
+        categoryService.delete(cat);
+        return "index";
+    }
+
+    @RequestMapping("/deleteCat/{id}")
+    public String findCatToDelete(Model model, @PathVariable long id) {
+        Optional<Category> possibleData = categoryService.get(id);
+        if (possibleData.isPresent()) {
+            model.addAttribute("category", possibleData.get());
+            return "deleteCat";
+        }
+        return "notfound";
+    }
 }
