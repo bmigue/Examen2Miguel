@@ -6,19 +6,19 @@
 <title>TeCaSa - List All</title>
 </head>
 <body>
-	<h3>List of Workshops</h3>
+	<h3>Lista de Workshops</h3>
 	<div>
 	
 		<ul>
 			<div th:each="entry : ${workshopNombre}">
 				<li>
 					
-						<span><bold>Name: </bold></span><span th:text="${entry.name}">Name</span><br/>
-					<span><bold>Author:</bold> </span><span th:text="${entry.author}">Author</span><br/>
+						<span><bold>Name: </bold></span><span th:text="${entry.name}">Nombre</span><br/>
+					<span><bold>Author:</bold> </span><span th:text="${entry.author}">Autor</span><br/>
 					
-					<span><bold>Category:</bold> </span><span th:text="${entry.category}">Category</span><br/>
-						<a th:href="@{/edit/{id}(id=${entry.id})}">Edit</a><br/>
-						<a th:href="@{/detalle/{id}(id=${entry.id})}">Details</a><br/>
+					<span><bold>Category:</bold> </span><span th:text="${entry.category}">Categoria</span><br/>
+						<a th:href="@{/edit/{id}(id=${entry.id})}">Editar</a><br/>
+						<a th:href="@{/detalle/{id}(id=${entry.id})}">Detalles</a><br/>
 				
 				</li>
 			</div>

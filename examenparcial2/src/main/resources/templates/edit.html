@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8"></meta>
 <meta http-equiv="Content-Type" content="text/html"></meta>
-<title>TeCaSa - Edit workshop</title>
+<title>TeCaSa - Editar workshop</title>
 </head>
 <body>
 <h3>Editing: #<span th:text="${workshopToEdit.id}">Id</span></h3>
 <form action="#" th:action="@{/edit/{id}(id=${workshopToEdit.id})}" th:object="${workshopToEdit}" method="post">
-    <label for="name">Name</label>
+    <label for="name">Nombre</label>
     <input type="text" th:field="*{name}" id="name"><br>
-        <label for="name">Author</label>
+        <label for="name">Autor</label>
     <input type="text" th:field="*{author}" id="author"><br>
-    <label for="name">Objective</label>
+    <label for="name">Objectivo</label>
     <input type="text" th:field="*{objective}" id="objective"><br>
-    <label for="category">Category</label>
+    <label for="category">Categoria</label>
     
     <select name="category" id="category" th:field="*{category}" >
   <option th:value="*{category}" th:text="*{category}" disabled></option>

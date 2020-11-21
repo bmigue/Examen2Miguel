@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8"></meta>
 <meta http-equiv="Content-Type" content="text/html"></meta>
-<title>TeCaSa - Insert</title>
+<title>TeCaSa - Insertar Workshop</title>
 </head>
 <body>
-<h3>Insert:</h3>
+<h3>Insertar:</h3>
 <form action="#" th:action="@{/insertar}" th:object="${workshop}" method="post">
-    <label for="name">Name</label>
+    <label for="name">Nombre</label>
     <input type="text" th:field="*{name}" id="name">
     <br/>
-    <label for="name">Objective</label>
+    <label for="name">Objetivo</label>
     <input type="text" th:field="*{objective}" id="objective">
     <br/>
-    <label for="author">Author</label>
+    <label for="author">Autor</label>
     <select type="text" th:field="*{author}" id="author">
     <option value="Miguel Gutierrez">Miguel Gutierrez</option>
     <option value="Mario Aguero">Mario Aguero</option>
@@ -26,12 +26,12 @@
     <label for="keywords">Keywords</label>
     <input type="text" th:field="*{keywords}" id="keywords">
     <br/>
-        <label for="category">Category</label>
+        <label for="category">Categoria</label>
         <select name="category" id="category" th:field="*{category}" >
             <option th:each="entry : ${category}" th:value="${entry.name}" th:text="${entry.name}"></option>
         </select>
     <br/>
-     <input type="submit" value="Add Workshop">
+     <input type="submit" value="Agregar Workshop">
 </form>
 
 

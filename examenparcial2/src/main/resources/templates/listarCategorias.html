@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8"></meta>
     <meta http-equiv="Content-Type" content="text/html"></meta>
-    <title>TeCaSa - List All</title>
+    <title>TeCaSa - List Categorias</title>
 </head>
 <body>
-<h3>List of Workshops</h3>
+<h3>List de categorias</h3>
 <div>
 
     <ul>
@@ -14,7 +14,7 @@
             <li>
 
                 <span><bold>Name: </bold></span><span th:text="${entry.name}">Nombre</span><br/>
-                <a th:href="@{/editCat/{id}(id=${entry.id})}">Edit</a><br/>
+                <a th:href="@{/editCat/{id}(id=${entry.id})}">Editar</a><br/>
 
             </li>
         </div>

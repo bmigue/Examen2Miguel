@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8"></meta>
 <meta http-equiv="Content-Type" content="text/html"></meta>
-<title>TeCaSa - Add activities</title>
+<title>TeCaSa - Agregar actividades</title>
 </head>
 <body>
-<h3>Add activity for workshop #: <span th:text="${workshop.name}">Name</span></h3>
+<h3>Add activity for workshop #: <span th:text="${workshop.name}">Nombre</span></h3>
 <form action="#" th:action="@{/agregarActividad/{id}(id=${workshop.id})}" th:object="${activity}" method="post">
-    <label for="name">Name</label>
+    <label for="name">Nombre</label>
     <input type="text" th:field="*{name}" id="name"><br>
-     <label for="description">Description</label>
+     <label for="description">Descripcion</label>
     <input type="text" th:field="*{description}" id="description"><br>
-     <label for="text">Text to display</label>
+     <label for="text">Texto</label>
     <input type="text" th:field="*{text}" id="text"><br>
-     <label for="number">Time</label>
+     <label for="number">Tiempo de duracion</label>
     <input type="number" th:field="*{time}" id="number"><br>
      <input type="submit" value="Add Activity">   
 </form>

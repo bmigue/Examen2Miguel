@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"></meta>
 <meta http-equiv="Content-Type" content="text/html"></meta>
-<title>TeCaSa - List All</title>
+<title>TeCaSa - Listar</title>
 </head>
 <body>
 	<h3>List of Workshops</h3>
@@ -13,11 +13,11 @@
 			<div th:each="entry : ${workshops}">
 				<li>
 					
-						<span><bold>Name: </bold></span><span th:text="${entry.name}">Name</span><br/>
-					<span><bold>Author:</bold> </span><span th:text="${entry.author}">Author</span><br/>
-					<span><bold>Category:</bold> </span><span th:text="${entry.category}">Category</span><br/>
-						<a th:href="@{/edit/{id}(id=${entry.id})}">Edit</a><br/>
-						<a th:href="@{/detalle/{id}(id=${entry.id})}">Details</a><br/>
+						<span><bold>Name: </bold></span><span th:text="${entry.name}">Nombre</span><br/>
+					<span><bold>Author:</bold> </span><span th:text="${entry.author}">Autor</span><br/>
+					<span><bold>Category:</bold> </span><span th:text="${entry.category}">Categoria</span><br/>
+						<a th:href="@{/edit/{id}(id=${entry.id})}">Editar</a><br/>
+						<a th:href="@{/detalle/{id}(id=${entry.id})}">Detalles</a><br/>
 						<a th:href="@{/word/{id}(id=${entry.id})}">Generar un word</a><br/>
 
 				</li>
