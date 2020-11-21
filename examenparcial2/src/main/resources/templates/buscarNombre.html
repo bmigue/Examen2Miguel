@@ -6,15 +6,15 @@
 <title>TeCaSa - Buscar</title>
 </head>
 <body>
-<h3>Search:</h3>
-<h4>By name:</h4>
+<h3>Buscar:</h3>
+<h4>Por name:</h4>
 <form action="#" th:action="@{/listarNombre}" th:object="${workshop}" method="get" id="form1">
     <label for="name">Nombre</label>
     <input type="text" th:field="*{name}" id="name">
     <br/>
          <input type="submit" th:href="@{/listarNombre/{name}(name=${workshop.name})}" value="Search">
 </form>
-<h4>By category:</h4>
+<h4>Por categoria:</h4>
 <form action="#" th:action="@{/listarCat}" th:object="${workshop}" method="get" id="form2">
    <label for="category">Categoria</label>
 
@@ -24,6 +24,21 @@
 </select>
     <br/>
          <input type="submit" th:href="@{/listarCat/{category}(category=${workshop.category})}" value="Search">
+</form>
+
+
+<h4>Por autor:</h4>
+<form action="#" th:action="@{/listarAutor}" th:object="${workshop}" method="get" id="form3">
+    <label for="category">Autor</label>
+
+    <select type="text" th:field="*{author}" id="author">
+        <option value="Miguel Gutierrez">Miguel Gutierrez</option>
+        <option value="Mario Aguero">Mario Aguero</option>
+        <option value="Tracy Mora">Tracy Mora</option>
+        <option value="Marlon Aguero">Marlon Aguero</option>
+    </select>
+    <br/>
+    <input type="submit" th:href="@{/listarAutor/{author}(author=${workshop.author})}" value="Search">
 </form>
 </body>
 </html>

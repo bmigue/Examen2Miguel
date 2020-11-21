@@ -35,6 +35,11 @@ public class WorkshopServiceImpl implements WorkshopService {
     }
 
     @Override
+    public List<Workshop> findAuth(String name) {
+        return repo.findByAuthorContaining(name);
+    }
+
+    @Override
     public List<Workshop> getAll() {
         return repo.findAll();
     }

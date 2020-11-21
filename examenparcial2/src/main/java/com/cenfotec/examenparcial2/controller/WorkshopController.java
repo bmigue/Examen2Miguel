@@ -83,6 +83,12 @@ public class WorkshopController {
         return "listarNombre";
     }
 
+    @RequestMapping("/listarAutor")
+    public String listarAutor(Model model, @RequestParam String author) {
+        model.addAttribute("workshopAutor", workshopService.findAuth(author));
+        return "listarAutor";
+    }
+
     @RequestMapping("/listarCat")
     public String listarCat(Model model, @RequestParam String category) {
         model.addAttribute("workshopCat", workshopService.findCat(category));
